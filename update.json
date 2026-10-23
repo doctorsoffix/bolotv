@@ -1,8 +1,8 @@
 {
-  "versionCode": 10,
-  "versionName": "1.4.5",
-  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.5/bolotv.apk",
-  "size": 3589372,
-  "sha256": "d7cca4ae4fb5b34c11ca479122767da7422a2da6163806862fb63baae9e56b2c",
-  "notes": "Neu in 1.4.5:\n• Fire TV: Filme und Serien zeigen jetzt das Bild\n• Updates werden sofort nach der Veröffentlichung gefunden"
+  "versionCode": 11,
+  "versionName": "1.4.6",
+  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.6/bolotv.apk",
+  "size": 3592753,
+  "sha256": "0c9204d7b9475afb2c56dc42c012941255bda1df61828079b22b8772ad2c1e11",
+  "notes": "Neu in 1.4.6:\n• Schnellerer Senderwechsel\n• Sofortstart: Senderlisten erscheinen sofort, aktualisiert wird im Hintergrund\n• Senderwahl mit den Zifferntasten der Fernbedienung, Senderplätze in der Liste\n• Verlängerung durch den Anbieter ohne Neustart"
 }
