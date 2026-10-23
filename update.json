@@ -1,8 +1,8 @@
 {
-  "versionCode": 11,
-  "versionName": "1.4.6",
-  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.6/bolotv.apk",
-  "size": 3592753,
-  "sha256": "0c9204d7b9475afb2c56dc42c012941255bda1df61828079b22b8772ad2c1e11",
-  "notes": "Neu in 1.4.6:\n• Schnellerer Senderwechsel\n• Sofortstart: Senderlisten erscheinen sofort, aktualisiert wird im Hintergrund\n• Senderwahl mit den Zifferntasten der Fernbedienung, Senderplätze in der Liste\n• Verlängerung durch den Anbieter ohne Neustart"
+  "versionCode": 12,
+  "versionName": "1.4.7",
+  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.7/bolotv.apk",
+  "size": 3605073,
+  "sha256": "8e922c7171716758a0684588dcde59361b839c4be43d4e0dddb9c89d0f83fd8c",
+  "notes": "Neu in 1.4.7:\n• Filme: 6 Poster pro Reihe, eigene Film-Seite mit Abspielen, Von vorne, Trailer und Merken\n• Länder getrennt für Live TV, Filme und Serien ein- und ausblenden\n• Programm und Logos für alle Fassungen eines Senders (HD, UHD, FHD)\n• Mehr Programminfos über das komplette Programmheft des Anbieters\n• Logos laden schneller\n• Serien: Staffel-Liste flackert nicht mehr"
 }
