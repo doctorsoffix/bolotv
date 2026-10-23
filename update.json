@@ -1,8 +1,8 @@
 {
-  "versionCode": 5,
-  "versionName": "1.4",
-  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4/bolotv.apk",
-  "size": 3583307,
-  "sha256": "be14c4ec07398df30053f4c23cab6b949d3426096e8cffd7c8d4ddb9d4e59265",
-  "notes": "Neu in 1.4:\n• Listen-Editor: Länder, Kategorien und Sender umbenennen, verschieben, ausblenden, Logos wählen (OK gedrückt halten)\n• Neuer Startbildschirm: Einrichtung durch Anbieter oder manuell\n• Senderlogos laden zuverlässig und schneller\n• Handy: Scrollen ohne Springen\n• Automatische Updates\n• Fernwartung immer erreichbar"
+  "versionCode": 6,
+  "versionName": "1.4.1",
+  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.1/bolotv.apk",
+  "size": 3587038,
+  "sha256": "f7ab38d9ba666d94e207e02ca9d93958f51cb390f9e6eb6049c6f2c298cf0c1c",
+  "notes": "Neu in 1.4.1:\n• Einfachere Erlaubnis beim ersten Update\n• Logo-Suche im Editor verbessert\n• Stabilität verbessert"
 }
