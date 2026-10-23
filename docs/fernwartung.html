@@ -95,6 +95,14 @@
   #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
   .banner { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 14px; background: var(--panel);
     border: 1px solid var(--line); margin-bottom: 14px; font-size: 14px; }
+  .ov { list-style: none; margin: 8px 0 0; padding: 0; }
+  .ov li { display: grid; grid-template-columns: auto 1fr auto; gap: 4px 12px; align-items: center; padding: 12px;
+    border-radius: 14px; background: rgba(0,0,0,.25); margin-top: 8px; }
+  .ov .name { font-weight: 700; } .ov .sub { color: var(--dim); font-size: 12px; }
+  .ov .exp { text-align: right; font-size: 13px; white-space: nowrap; }
+  .ov .exp.warn { color: var(--orange); } .ov .exp.bad { color: var(--red); font-weight: 700; }
+  .ov .exp.good { color: var(--green); }
+  .ov button { grid-column: 2 / 4; margin-top: 4px; min-height: 40px; padding: 8px; }
   footer { text-align: center; color: var(--dim); font-size: 12px; margin-top: 24px; letter-spacing: .04em; }
   @media (min-width: 700px) { body { padding-left: 24px; padding-right: 24px; } }
 </style>
@@ -121,6 +129,15 @@
     <!-- GERÄTE -->
     <div class="page on" id="p-devices">
       <section class="card">
+        <h2>ÜBERSICHT</h2>
+        <p class="hint">Fragt alle Geräte gleichzeitig ab: online, Version, Modell und wie lange sie noch freigeschaltet sind.
+          Rot = abgelaufen oder in 7 Tagen. „+1 Jahr“ verlängert ab dem bisherigen Ablaufdatum, ohne dass die App neu startet.
+          Geräte, die gerade aus sind, erscheinen grau.</p>
+        <button id="checkAll">Alle Geräte prüfen</button>
+        <ul class="ov" id="overview"></ul>
+      </section>
+
+      <section class="card">
         <h2>MEINE GERÄTE</h2>
         <p class="hint">Antippen zum Auswählen. Die Nummer steht in der App beim Einrichten oder unter Einstellungen → Fernwartung.</p>
         <ul class="devices" id="devList"></ul>
@@ -129,7 +146,6 @@
           <div><label>MAC / Gerätecode</label><input id="devMac" class="mono" placeholder="96EE-C311-1564" autocomplete="off" autocapitalize="characters" spellcheck="false"></div>
         </div>
         <button id="devAdd">Gerät hinzufügen</button>
-        <button class="ghost" id="pingAll">Alle Geräte prüfen</button>
       </section>
 
       <section class="card" id="devCard" hidden>
@@ -379,6 +395,111 @@ async function send(cmd, quiet) {
   return true;
 }
 
+// --- Übersicht aller Geräte -----------------------------------------------------------------------
+const today = () => Math.floor((Date.now() - new Date().getTimezoneOffset() * 60000) / 86400000);
+const dayToDate = day => new Date(day * 86400000 + 12 * 3600000);
+const fmtDay = day => dayToDate(day).toLocaleDateString("de-DE");
+
+// Letzter freigeschalteter Tag (Tage seit 1970); ältere App-Versionen melden nur Text "aktiviert bis TT.MM.JJJJ".
+function untilDay(r) {
+  if (r.until > 0) return r.until;
+  const m = /(\d{2})\.(\d{2})\.(\d{4})/.exec(r.activated || "");
+  return m ? Math.floor(Date.UTC(+m[3], +m[2] - 1, +m[1]) / 86400000) : 0;
+}
+
+async function sendTo(dev, cmd) {
+  const r = await fetch(NTFY + dev.topic, { method: "POST", body: await encrypt(dev.key, cmd) });
+  return r.ok;
+}
+
+async function pollReply(dev, since) {
+  const r = await fetch(NTFY + dev.topic + "-r/json?poll=1&since=" + since);
+  const lines = (await r.text()).split("\n").filter(Boolean).map(l => JSON.parse(l)).filter(m => m.event === "message");
+  let last = null;
+  for (const m of lines) {
+    try { last = await decrypt(dev.key, m.attachment ? await (await fetch(m.attachment.url)).text() : m.message); } catch (e) {}
+  }
+  return last;
+}
+
+let checking = false;
+async function checkAll() {
+  if (!devices.length) { toast("Noch keine Geräte gespeichert"); return; }
+  if (checking) return;
+  checking = true;
+  $("checkAll").disabled = true;
+  $("checkAll").textContent = "Frage ab …";
+  const since = Math.floor(Date.now() / 1000) - 1;
+  const devs = await Promise.all(devices.map(async d => Object.assign(await device(d.mac), { name: d.name })));
+  await Promise.all(devs.map(d => sendTo(d, { cmd: "ping" }).catch(() => false)));
+  await new Promise(r => setTimeout(r, 8000));
+  const answers = await Promise.all(devs.map(d => pollReply(d, since).catch(() => null)));
+  devs.forEach((d, i) => { if (answers[i]) lastSeen[d.mac] = answers[i]; else delete lastSeen[d.mac]; });
+  renderOverview(devs, answers);
+  renderDevices();
+  $("checkAll").disabled = false;
+  $("checkAll").textContent = "Alle Geräte prüfen";
+  checking = false;
+}
+
+function renderOverview(devs, answers) {
+  const ul = $("overview");
+  ul.innerHTML = "";
+  // Ablaufende zuerst, dann der Rest, Geräte ohne Antwort am Ende.
+  const rows = devs.map((d, i) => ({ d, r: answers[i] })).sort((a, b) =>
+    (a.r ? untilDay(a.r) || 1e9 : 2e9) - (b.r ? untilDay(b.r) || 1e9 : 2e9));
+  for (const { d, r } of rows) {
+    const li = document.createElement("li");
+    li.innerHTML = '<span class="dot"></span><div><div class="name"></div><div class="sub"></div></div><div class="exp"></div>';
+    li.querySelector(".name").textContent = d.name || label(d.mac);
+    const exp = li.querySelector(".exp");
+    if (!r) {
+      li.querySelector(".sub").textContent = label(d.mac) + "  ·  keine Antwort (aus oder App zu)";
+    } else {
+      li.querySelector(".dot").className = "dot on";
+      li.querySelector(".sub").textContent = `${r.model}  ·  App ${r.version}`;
+      const until = untilDay(r);
+      const left = until - today();
+      if (until > 0) {
+        exp.textContent = left < 0 ? `abgelaufen ${fmtDay(until)}` : `bis ${fmtDay(until)} · ${left} T.`;
+        exp.className = "exp " + (left < 0 ? "bad" : left <= 7 ? "bad" : left <= 30 ? "warn" : "good");
+      } else if (r.trial > Date.now()) {
+        exp.textContent = "Testzugang"; exp.className = "exp warn";
+      } else {
+        exp.textContent = "nicht aktiviert"; exp.className = "exp bad";
+      }
+      const btn = document.createElement("button");
+      btn.className = "violet";
+      btn.textContent = until > 0 ? `+1 Jahr (bis ${fmtDay(Math.max(until, today()) + 365)})` : "Für 1 Jahr freischalten";
+      btn.onclick = () => extend(d, r, btn);
+      li.append(btn);
+    }
+    ul.append(li);
+  }
+}
+
+// Ab dem bisherigen Ablaufdatum verlängern (früh verlängern kostet keine Tage).
+async function extend(dev, r, btn) {
+  const newUntil = Math.max(untilDay(r), today()) + 365;
+  if (!confirm(`${dev.name || label(dev.mac)} bis ${fmtDay(newUntil)} freischalten?`)) return;
+  btn.disabled = true;
+  const code = await activationCode(dev.mac, dayToDate(newUntil));
+  const since = Math.floor(Date.now() / 1000) - 1;
+  if (!(await sendTo(dev, { cmd: "activate", code }))) { toast("Senden fehlgeschlagen"); btn.disabled = false; return; }
+  log(`${dev.name}: Verlängerung gesendet (Code ${code}, bis ${fmtDay(newUntil)})`);
+  btn.textContent = "Gesendet – warte auf Bestätigung …";
+  await new Promise(res => setTimeout(res, 6000));
+  const answer = await pollReply(dev, since).catch(() => null);
+  if (answer && untilDay(answer) >= newUntil) {
+    btn.textContent = `✓ Verlängert bis ${fmtDay(untilDay(answer))}`;
+    toast("Verlängert ✓");
+    lastSeen[dev.mac] = answer;
+  } else {
+    btn.textContent = answer ? answer.msg : "Keine Bestätigung – Gerät aus? Später erneut prüfen.";
+    btn.disabled = false;
+  }
+}
+
 // --- Aktivierungscode (wie License.java) -----------------------------------------------------
 async function activationCode(mac, untilDate) {
   const day = Math.round((Date.UTC(untilDate.getFullYear(), untilDate.getMonth(), untilDate.getDate()) - Date.UTC(2024, 0, 1)) / 86400000);
@@ -490,12 +611,7 @@ function wire() {
     $("devMac").value = ""; $("devName").value = "";
     renderDevices(); select(mac);
   };
-  $("pingAll").onclick = async () => {
-    for (const d of devices) {
-      await select(d.mac);
-      await new Promise(r => setTimeout(r, 2500));
-    }
-  };
+  $("checkAll").onclick = checkAll;
   document.querySelectorAll("button[data-cmd]").forEach(b => b.onclick = () => {
     const cmd = b.dataset.cmd;
     if (cmd === "logout" && !confirm("Zugang auf dem Gerät wirklich löschen?")) return;
