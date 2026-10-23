@@ -1,8 +1,8 @@
 {
-  "versionCode": 16,
-  "versionName": "1.5.1",
-  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.5.1/bolotv.apk",
-  "size": 12159479,
-  "sha256": "448e31fe1b17ed7b2c4eccc45ffbb3d73f4e9242fc1f84ee6e63a832de1a6e67",
-  "notes": "Neu in 1.5.1:\n• Deutlich flüssiger beim Scrollen (Live TV und Filme)\n• Senderlogos erscheinen direkt nach dem Start\n• Filme: alle 6 Filme einer Reihe auswählbar, kein Wackeln mehr beim Links/Rechts\n• Filme: Steuerleiste verschwindet nach dem Start von selbst"
+  "versionCode": 17,
+  "versionName": "1.5.2",
+  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.5.2/bolotv.apk",
+  "size": 12160426,
+  "sha256": "61b6c10a72c857f1fe01634ac2880785dd573c984016be6665c4e6c9cde56073",
+  "notes": "Neu in 1.5.2:\n• Vorschau startet schneller und flackert nicht mehr beim Scrollen\n• Live TV: neuer Hintergrund im Apple-Stil\n• Programm: keine doppelten oder falschen Sendungen mehr bei „Danach“\n• Weichere Animationen"
 }
