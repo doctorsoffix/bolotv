@@ -1,8 +1,8 @@
 {
-  "versionCode": 18,
-  "versionName": "1.5.3",
-  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.5.3/bolotv.apk",
-  "size": 12162128,
-  "sha256": "106030a799c9ab9b50dbd9ac955d6d71711e34146eeb2c7d6b9bf437062d1e75",
-  "notes": "Neu in 1.5.3:\n• Neuer farbiger Hintergrund: Live TV blau, Filme rot/orange, Serien violett\n• Vorschau blendet weich über\n• Ruhigeres, flüssigeres Scrollen\n• Automatisches Neu-Verbinden, wenn das Bild hängt oder die Verbindung abbricht\n• Filme: leere Kategorien durch Aussetzer des Anbieters behoben"
+  "versionCode": 19,
+  "versionName": "1.5.4",
+  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.5.4/bolotv.apk",
+  "size": 12162401,
+  "sha256": "36ea00fe45cad2fd83bbbbab4c2446e044866604f38300c3b96ed74047528b05",
+  "notes": "Neu in 1.5.4:\n• Senderliste scrollt schneller und flüssiger"
 }
