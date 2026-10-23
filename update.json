@@ -1,8 +1,8 @@
 {
-  "versionCode": 7,
-  "versionName": "1.4.2",
-  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.2/bolotv.apk",
-  "size": 3587723,
-  "sha256": "fc4c1665fa2bed0415e5d759c337f1ad2802a567738d9b9325c65452525baf6a",
-  "notes": "Neu in 1.4.2:\n• Viel mehr Senderlogos (u. a. Sky, DAZN und deutsche HD-Sender)\n• Schwarzes Bild beim Wechsel auf Vollbild behoben"
+  "versionCode": 8,
+  "versionName": "1.4.3",
+  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.3/bolotv.apk",
+  "size": 3588555,
+  "sha256": "b3e65813a2f215706968f56903478896a6d3cfcba782c54d7091edfd1c3a1ae0",
+  "notes": "Neu in 1.4.3:\n• Filme und Serien: Vor- und Zurückspulen mit der Fernbedienung (◀ ▶, ⏪ ⏩), 10 s zurück / 30 s vor\n• Steuerleiste verschwindet nach 3 Sekunden, Zurück blendet sie aus\n• Serien: „Nächste Folge“ funktioniert\n• Fire TV: blaues Bild im Vollbild behoben\n• Senderinfo verschwindet schneller"
 }
