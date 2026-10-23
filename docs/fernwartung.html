@@ -363,7 +363,7 @@ function renderInfo(r) {
   const dl = $("devInfo");
   dl.innerHTML = "";
   const rows = r ? [["Nummer", r.label], ["Modell", r.model + " · Android " + r.android], ["App", "Version " + r.version],
-    ["Freischaltung", r.activated], ["Zugang", r.login]] : [["Status", "noch keine Antwort"]];
+    ["Freischaltung", r.activated], ["Zugang", r.login]].concat(r.player ? [["Player", r.player]] : []) : [["Status", "noch keine Antwort"]];
   for (const [k, v] of rows) {
     const dt = document.createElement("dt"); dt.textContent = k;
     const dd = document.createElement("dd"); dd.textContent = v;
