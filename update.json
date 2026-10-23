@@ -1,8 +1,8 @@
 {
-  "versionCode": 19,
-  "versionName": "1.5.4",
-  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.5.4/bolotv.apk",
-  "size": 12162401,
-  "sha256": "36ea00fe45cad2fd83bbbbab4c2446e044866604f38300c3b96ed74047528b05",
-  "notes": "Neu in 1.5.4:\n• Senderliste scrollt schneller und flüssiger"
+  "versionCode": 20,
+  "versionName": "1.5.5",
+  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.5.5/bolotv.apk",
+  "size": 12164130,
+  "sha256": "daf7c1689ba0c50f7cd93b4d0fc8098ada9571a11e41b89a4bc15ad966f838f5",
+  "notes": "Neu in 1.5.5:\n• Filme scrollen flüssiger\n• Richtige Logos für TVR FHD/UHD und keine Logos gleichnamiger Sender aus anderen Ländern mehr"
 }
