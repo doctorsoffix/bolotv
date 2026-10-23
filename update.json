@@ -1,8 +1,8 @@
 {
-  "versionCode": 12,
-  "versionName": "1.4.7",
-  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.7/bolotv.apk",
-  "size": 3605073,
-  "sha256": "8e922c7171716758a0684588dcde59361b839c4be43d4e0dddb9c89d0f83fd8c",
-  "notes": "Neu in 1.4.7:\n• Filme: 6 Poster pro Reihe, eigene Film-Seite mit Abspielen, Von vorne, Trailer und Merken\n• Länder getrennt für Live TV, Filme und Serien ein- und ausblenden\n• Programm und Logos für alle Fassungen eines Senders (HD, UHD, FHD)\n• Mehr Programminfos über das komplette Programmheft des Anbieters\n• Logos laden schneller\n• Serien: Staffel-Liste flackert nicht mehr"
+  "versionCode": 13,
+  "versionName": "1.4.8",
+  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.8/bolotv.apk",
+  "size": 3606994,
+  "sha256": "594902a5e90f156d59b199d0ce0a3700773b77f9ae739f5aa803ae4c3df306eb",
+  "notes": "Neu in 1.4.8:\n• Fire TV: Abstürze und blaues Bild behoben\n• Wieder flüssiger beim Scrollen\n• Tonspuren mit Sprachnamen (Deutsch, Englisch, Rumänisch …) statt Spur 1, 2, 3\n• Trailer entfernt"
 }
