@@ -1,8 +1,8 @@
 {
-  "versionCode": 6,
-  "versionName": "1.4.1",
-  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.1/bolotv.apk",
-  "size": 3587038,
-  "sha256": "f7ab38d9ba666d94e207e02ca9d93958f51cb390f9e6eb6049c6f2c298cf0c1c",
-  "notes": "Neu in 1.4.1:\n• Einfachere Erlaubnis beim ersten Update\n• Logo-Suche im Editor verbessert\n• Stabilität verbessert"
+  "versionCode": 7,
+  "versionName": "1.4.2",
+  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.2/bolotv.apk",
+  "size": 3587723,
+  "sha256": "fc4c1665fa2bed0415e5d759c337f1ad2802a567738d9b9325c65452525baf6a",
+  "notes": "Neu in 1.4.2:\n• Viel mehr Senderlogos (u. a. Sky, DAZN und deutsche HD-Sender)\n• Schwarzes Bild beim Wechsel auf Vollbild behoben"
 }
