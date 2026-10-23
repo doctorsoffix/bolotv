@@ -1,8 +1,8 @@
 {
-  "versionCode": 8,
-  "versionName": "1.4.3",
-  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.3/bolotv.apk",
-  "size": 3588555,
-  "sha256": "b3e65813a2f215706968f56903478896a6d3cfcba782c54d7091edfd1c3a1ae0",
-  "notes": "Neu in 1.4.3:\n• Filme und Serien: Vor- und Zurückspulen mit der Fernbedienung (◀ ▶, ⏪ ⏩), 10 s zurück / 30 s vor\n• Steuerleiste verschwindet nach 3 Sekunden, Zurück blendet sie aus\n• Serien: „Nächste Folge“ funktioniert\n• Fire TV: blaues Bild im Vollbild behoben\n• Senderinfo verschwindet schneller"
+  "versionCode": 9,
+  "versionName": "1.4.4",
+  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.4/bolotv.apk",
+  "size": 3588855,
+  "sha256": "19b721ee50749972b7cb2380edbacbc65e2fb209bebae53af0e204333dce2eaf",
+  "notes": "Neu in 1.4.4:\n• Fire TV: Vollbild zeigt jetzt das Bild statt einer blauen Fläche\n• Fernwartung zeigt den Zustand des Players"
 }
