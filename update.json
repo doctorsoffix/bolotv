@@ -1,8 +1,8 @@
 {
-  "versionCode": 9,
-  "versionName": "1.4.4",
-  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.4/bolotv.apk",
-  "size": 3588855,
-  "sha256": "19b721ee50749972b7cb2380edbacbc65e2fb209bebae53af0e204333dce2eaf",
-  "notes": "Neu in 1.4.4:\n• Fire TV: Vollbild zeigt jetzt das Bild statt einer blauen Fläche\n• Fernwartung zeigt den Zustand des Players"
+  "versionCode": 10,
+  "versionName": "1.4.5",
+  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.5/bolotv.apk",
+  "size": 3589372,
+  "sha256": "d7cca4ae4fb5b34c11ca479122767da7422a2da6163806862fb63baae9e56b2c",
+  "notes": "Neu in 1.4.5:\n• Fire TV: Filme und Serien zeigen jetzt das Bild\n• Updates werden sofort nach der Veröffentlichung gefunden"
 }
