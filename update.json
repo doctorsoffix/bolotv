@@ -1,8 +1,8 @@
 {
-  "versionCode": 14,
-  "versionName": "1.4.9",
-  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.4.9/bolotv.apk",
-  "size": 3607071,
-  "sha256": "7219b058e89ea6c8bdce00c01ee5e684c59ace9e5fd871b3b6b1d538b005897a",
-  "notes": "Neu in 1.4.9:\n• Filme: Steuerleiste verschwindet nach dem Start von selbst\n• Fire TV: Abstürze und blaues Bild behoben\n• Tonspuren mit Sprachnamen statt Spur 1, 2, 3"
+  "versionCode": 15,
+  "versionName": "1.5.0",
+  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.5.0/bolotv.apk",
+  "size": 12079571,
+  "sha256": "7fcd22cfb74bef821a51e8251a9d084db2d8980d7cee58f466ac0e08e4e4b062",
+  "notes": "Neu in 1.5.0:\n• Senderlogos für Deutschland, Rumänien, Österreich, Schweiz und International sind in die App eingebaut und erscheinen sofort"
 }
