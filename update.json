@@ -1,8 +1,8 @@
 {
-  "versionCode": 21,
-  "versionName": "1.5.6",
-  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.5.6/bolotv.apk",
-  "size": 12166969,
-  "sha256": "55b7504c270a10b0e0d0d338fc6c5509f9f2194905d298157b7c9f0b554d3280",
-  "notes": "Neu in 1.5.6:\n• Neuer Testcode 55005: 5 Tage kostenlos testen\n• Programmführer (EPG) auch bei Anbietern ohne Kurz-EPG\n• Läuft jetzt auch auf älteren Fire TV Sticks (Fire OS 5)\n• Schnelleres Umschalten zwischen Sendern\n• Sicherere Fernwartung"
+  "versionCode": 22,
+  "versionName": "1.5.7",
+  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.5.7/bolotv.apk",
+  "size": 12171543,
+  "sha256": "80f0793e66c0f4624346e4fcac1aeb0b590408ad5967e13404d59d481d1776c0",
+  "notes": "Neu in 1.5.7:\n• Programmführer (EPG) auch, wenn der Anbieter keinen liefert – automatisch aus einer freien Quelle für ca. 50 Länder\n• Programm erscheint schneller: wird gespeichert und nach dem Start sofort angezeigt\n• Richtige Uhrzeiten auch bei Anbietern mit falschen Zeitangaben\n• Programm auch für Sender wie „PRIME: …“, „JOYN: …“ und RAW-Fassungen\n• Großer Programmführer des Anbieters lädt im Hintergrund, ohne das Bild zu stören"
 }
