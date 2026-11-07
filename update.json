@@ -1,8 +1,8 @@
 {
-  "versionCode": 22,
-  "versionName": "1.5.7",
-  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.5.7/bolotv.apk",
-  "size": 12171543,
-  "sha256": "80f0793e66c0f4624346e4fcac1aeb0b590408ad5967e13404d59d481d1776c0",
-  "notes": "Neu in 1.5.7:\n• Programmführer (EPG) auch, wenn der Anbieter keinen liefert – automatisch aus einer freien Quelle für ca. 50 Länder\n• Programm erscheint schneller: wird gespeichert und nach dem Start sofort angezeigt\n• Richtige Uhrzeiten auch bei Anbietern mit falschen Zeitangaben\n• Programm auch für Sender wie „PRIME: …“, „JOYN: …“ und RAW-Fassungen\n• Großer Programmführer des Anbieters lädt im Hintergrund, ohne das Bild zu stören"
+  "versionCode": 23,
+  "versionName": "1.5.8",
+  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.5.8/bolotv.apk",
+  "size": 12202206,
+  "sha256": "a984a13293c1c6cdd997a904df93ebef29a6283e4a1dd791402ab0da2615c85d",
+  "notes": "Neu in 1.5.8:\n• Mehrere Benutzer: 👤-Knopf neben ⚙ – bis zu 4 Zugänge (Xtream/M3U) anlegen, wechseln, umbenennen, entfernen\n• Jeder Benutzer hat eigene Favoriten, Verlauf und 4er-Ansicht\n• 4er-Ansicht: ⊞-Knopf oben oder OK lange auf einem Sender drücken – 4 Sender gleichzeitig\n• In der 4er-Ansicht: Pfeile wählen das Feld (mit Ton), OK wählt einen Sender, P+/P− schaltet im Feld, „Groß anzeigen“ für Vollbild"
 }
