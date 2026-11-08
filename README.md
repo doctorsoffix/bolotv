@@ -6,7 +6,7 @@
 nach Ländern sortiert, mit Logos, Programm und Fernwartung.</p>
 
 <p align="center">
-  <a href="https://github.com/doctorsoffix/bolotv/releases/latest/download/bolotv.apk"><b>⬇︎ Neueste Version herunterladen</b></a> ·
+  <a href="https://doctorsoffix.github.io/bolotv/bolotv.apk"><b>⬇︎ Neueste Version herunterladen</b></a> ·
   <a href="https://doctorsoffix.github.io/bolotv/">Webseite</a>
 </p>
 
@@ -22,7 +22,7 @@ der Quellcode ist nicht öffentlich.
 | [Releases](https://github.com/doctorsoffix/bolotv/releases) | Die installierbaren APK-Dateien, jede Version einzeln |
 | `update.json` | Neueste Version – die App fragt hier nach Updates |
 | `config.json` | Einstellungen für alle Geräte (z. B. neue Serveradresse), **verschlüsselt** |
-| `docs/` | Webseite mit Download und Anleitung (GitHub Pages) |
+| `docs/` | Webseite mit Anleitung und der neuesten APK (GitHub Pages) |
 
 `config.json` ist mit dem Schlüssel der App verschlüsselt. Ohne ihn kann niemand die Einträge lesen oder
 gültige Einstellungen für die Geräte erzeugen.
@@ -32,7 +32,7 @@ gültige Einstellungen für die Geräte erzeugen.
 **Android TV / Fire TV:** App *Downloader* installieren, „unbekannte Quellen“ erlauben und diese Adresse öffnen:
 
 ```
-github.com/doctorsoffix/bolotv/releases/latest/download/bolotv.apk
+doctorsoffix.github.io/bolotv/bolotv.apk
 ```
 
 **Handy / Tablet:** Den Download-Link oben antippen und die Installation erlauben.
