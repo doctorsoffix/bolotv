@@ -1,8 +1,9 @@
 {
-  "versionCode": 23,
-  "versionName": "1.5.8",
-  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.5.8/bolotv.apk",
-  "size": 12202206,
-  "sha256": "a984a13293c1c6cdd997a904df93ebef29a6283e4a1dd791402ab0da2615c85d",
-  "notes": "Neu in 1.5.8:\n• Mehrere Benutzer: 👤-Knopf neben ⚙ – bis zu 4 Zugänge (Xtream/M3U) anlegen, wechseln, umbenennen, entfernen\n• Jeder Benutzer hat eigene Favoriten, Verlauf und 4er-Ansicht\n• 4er-Ansicht: ⊞-Knopf oben oder OK lange auf einem Sender drücken – 4 Sender gleichzeitig\n• In der 4er-Ansicht: Pfeile wählen das Feld (mit Ton), OK wählt einen Sender, P+/P− schaltet im Feld, „Groß anzeigen“ für Vollbild"
+  "versionCode": 24,
+  "versionName": "1.5.9",
+  "apk": "https://github.com/doctorsoffix/bolotv/releases/download/v1.5.9/bolotv.apk",
+  "apkMirror": "https://doctorsoffix.github.io/bolotv/bolotv.apk?v=24",
+  "size": 12204370,
+  "sha256": "4ee7edc1307d049684a9901f53d03f3b4405e8bffde46c42845b3fccfafb1b88",
+  "notes": "Neu in 1.5.9:\n• Scrollbalken in allen Listen (wie auf iPhone/iPad) – zeigt beim Blättern, wo du in der Liste bist, und blendet danach aus\n• Mehrfachansicht: beim Öffnen wählst du, ob 2 oder 4 Sender gleichzeitig laufen"
 }
